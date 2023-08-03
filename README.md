@@ -6,46 +6,54 @@ Windows 10 v22H2
 
 ## プロジェクト構成
 
+```sh
 .
-├─*bread-app-api* graphQLサーバ
-├─*bread-app-cli* パンの情報を取得し、DBに保存するCLI
-├─*bread-app-common* 共通ライブラリ
-├─*mock_request_bread-app-api* モックリクエスト用ファイル
-└─*terraform* firestore用のterraform
+├─bread-app-api # graphQLサーバ
+├─bread-app-cli # パンの情報を取得し、DBに保存するCLI
+├─bread-app-common # 共通ライブラリ
+├─mock_request_bread-app-api # モックリクエスト用ファイル
+└─terraform # firestore用のterraform
+```
 
 ### bread-app-api
 
+```sh
 bread-app-api
-├─*domain*
-│  ├─*dao* DBアクセスinterface
-│  └─*entity* DB Entity
-├─*graph*
-│  ├─*model* graphQL model
-│  ├─*resolvers* Query実装, DI管理
-│  └─*services* ユースケース層
-├─*infrastructure*
-│  └─*dao* DBアクセス実装
-├─*internal* gqlgen interface
-└─*tools*
+├─domain
+│  ├─dao # DBアクセスinterface
+│  └─entity # DB Entity
+├─graph
+│  ├─model # graphQL model
+│  ├─resolvers # Query実装, DI管理
+│  └─services # ユースケース層
+├─infrastructure
+│  └─dao # DBアクセス実装
+├─internal # gqlgen interface
+└─tools
+```
 
 ### bread-app-cli
 
+```sh
 bread-app-cli
-├─*cmd* コマンド
-├─*config* 設定関連
-├─*domain*
-│  ├─*dao* DBアクセスinterface
-│  └─*entity* DB Entity
-├─*infrastructure*
-│  ├─*contentful* Contentfulアクセス
-│  └─*dao* DBアクセス実装
-└─*services* ユースケース層
+├─cmd # コマンド
+├─config # 設定関連
+├─domain
+│  ├─dao # DBアクセスinterface
+│  └─entity # DB Entity
+├─infrastructure
+│  ├─contentful # Contentfulアクセス
+│  └─dao # DBアクセス実装
+└─services # ユースケース層
+```
 
 ### bread-app-common
 
+```sh
 bread-app-common
-├─*core* firebaseクライアントをシングルトンで管理
-└─*errors* bread-appエラー
+├─core # firebaseクライアントをシングルトンで管理
+└─errors # bread-appエラー
+```
 
 ## 環境構築
 
@@ -139,13 +147,13 @@ bread-app-common
 
     * フォーマット
 
-        ```json
-        {
-            "contentful": {
-                "token": {Contentfulのアクセストークン}
-            }
+    ```json
+    {
+        "contentful": {
+            "token": {Contentfulのアクセストークン}
         }
-        ```
+    }
+    ```
 
     * 格納場所
         * Windows: %USERPROFILE%/.config/breadapp/
