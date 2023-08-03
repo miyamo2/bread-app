@@ -62,7 +62,7 @@ func (r *fetchBreadServiceImpl) Fetch(ids []string) error {
 		}
 		createdAt := sys.CreatedAt
 		name := resp.Fields.Name
-		data = append(data, entity.NewBread(id, name, createdAt.String()))
+		data = append(data, entity.NewBread(id, name, createdAt))
 	}
 
 	// エラーチェック
