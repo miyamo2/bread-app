@@ -134,16 +134,22 @@ bread-app-common
 1. 依存パッケージのインストール.
 
     ```sh
-    ~github.com/miyamo2theppl/bread-app$ cd ./bread-app-cli&go mod tidy
+    ~github.com/miyamo2theppl/bread-app$ cd ./bread-app-cli&go mod download
     ```
 
-2. ビルド.
+2. go.sumの生成.
+
+    ```sh
+    ~github.com/miyamo2theppl/bread-app/bread-app-cli$ go mod tidy
+    ```
+
+3. ビルド.
 
     ```sh
     ~github.com/miyamo2theppl/bread-app/bread-app-cli$ cd ../&go build github.com/miyamo2theppl/bread-app/bread-app-cli
     ```
 
-3. 設定ファイルを格納.
+4. 設定ファイルを格納.
 
     * フォーマット
 
@@ -165,10 +171,16 @@ bread-app-common
 1. 依存パッケージのインストール.
 
     ```sh
-    ~github.com/miyamo2theppl/bread-app$ cd ./bread-app-api&go mod tidy
+    ~github.com/miyamo2theppl/bread-app$ cd ./bread-app-api&go mod download
     ```
 
-2. ビルド.
+2. go.sumの生成.
+
+    ```sh
+    ~github.com/miyamo2theppl/bread-app/bread-app-api$ go mod tidy
+    ```
+
+3. ビルド.
 
     ```sh
     ~github.com/miyamo2theppl/bread-app/bread-app-api$ cd ../&go build github.com/miyamo2theppl/bread-app/bread-app-api
