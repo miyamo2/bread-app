@@ -1,0 +1,16 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+type Bread {
+  id: ID!
+  name: String!
+  createdAt: String!
+}
+
+type Query {
+  breads: [Bread!]!
+  bread(
+    id: ID!
+  ): Bread
+}

@@ -1,0 +1,7 @@
+go 1.20
+
+use (
+	./bread-app-api
+	./bread-app-cli
+	./bread-app-common
+)

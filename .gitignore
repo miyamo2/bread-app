@@ -1,0 +1,6 @@
+*.terraform
+*.terraform.lock.hcl
+*.tfstate
+*go.sum
+*work.sum
+*.exe

@@ -1,0 +1,121 @@
+# 1. 全属性
+POST http://localhost:8080/query
+Content-Type: application/json
+X-REQUEST-TYPE: GraphQL
+
+query {
+  bread(id: "6QRk7gQYmOyJ1eMG9H4jbB") {
+    id
+    name
+    createdAt
+  }
+}
+
+###
+
+# 2-1. 任意の属性: id
+POST http://localhost:8080/query
+Content-Type: application/json
+X-REQUEST-TYPE: GraphQL
+
+query {
+  bread(id: "6QRk7gQYmOyJ1eMG9H4jbB") {
+    id
+  }
+}
+
+###
+
+# 2-2. 任意の属性: name
+POST http://localhost:8080/query
+Content-Type: application/json
+X-REQUEST-TYPE: GraphQL
+
+query {
+  bread(id: "6QRk7gQYmOyJ1eMG9H4jbB") {
+    name
+  }
+}
+
+###
+
+# 2-3. 任意の属性: createdAt
+POST http://localhost:8080/query
+Content-Type: application/json
+X-REQUEST-TYPE: GraphQL
+
+query {
+  bread(id: "6QRk7gQYmOyJ1eMG9H4jbB") {
+    createdAt
+  }
+}
+
+###
+
+# 2-4. 任意の属性: id, name
+POST http://localhost:8080/query
+Content-Type: application/json
+X-REQUEST-TYPE: GraphQL
+
+query {
+  bread(id: "6QRk7gQYmOyJ1eMG9H4jbB") {
+    id
+    name
+  }
+}
+
+###
+
+# 2-5 任意の属性: id, createdAt
+POST http://localhost:8080/query
+Content-Type: application/json
+X-REQUEST-TYPE: GraphQL
+
+query {
+  bread(id: "6QRk7gQYmOyJ1eMG9H4jbB") {
+    id
+    createdAt
+  }
+}
+
+###
+
+# 2-6 任意の属性: name, createdAt
+POST http://localhost:8080/query
+Content-Type: application/json
+X-REQUEST-TYPE: GraphQL
+
+query {
+  bread(id: "6QRk7gQYmOyJ1eMG9H4jbB") {
+    name
+    createdAt
+  }
+}
+
+###
+
+# 3-1 該当データなし 全属性
+POST http://localhost:8080/query
+Content-Type: application/json
+X-REQUEST-TYPE: GraphQL
+
+query {
+  bread(id: "FooBarBazzXYZ") {
+    id
+    name
+    createdAt
+  }
+}
+
+###
+
+# 3-2 該当データなし 任意の属性
+POST http://localhost:8080/query
+Content-Type: application/json
+X-REQUEST-TYPE: GraphQL
+
+query {
+  bread(id: "FooBarBazzXYZ") {
+    id
+  }
+}
