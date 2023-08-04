@@ -1,11 +1,12 @@
 # GraphQL schema example
 #
 # https://gqlgen.com/getting-started/
+scalar DateTime
 
 type Bread {
   id: ID!
   name: String!
-  createdAt: String!
+  createdAt: DateTime!
 }
 
 type Query {
