@@ -151,6 +151,10 @@ bread-app-common
 
 4. 設定ファイルを格納.
 
+    * ファイル名
+
+        * bread-app-cli.json
+
     * フォーマット
 
     ```json
